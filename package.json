@@ -1,14 +1,17 @@
 {
-  "name": "angular-jsx",
-  "version": "0.0.0",
-  "description": "JSX support for Angular",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Samuel Moritz <samuel.moritz@gmail.com>",
-  "license": "MIT",
-  "dependencies": {
-    "recast": "^0.10.32"
-  }
+    "name": "angular-jsx",
+    "version": "0.0.0",
+    "description": "JSX support for Angular",
+    "main": "index.js",
+    "scripts": {
+        "test": "node ./node_modules/mocha/bin/mocha --reporter spec --full-trace"
+    },
+    "author": "Samuel Moritz <samuel.moritz@gmail.com>",
+    "license": "MIT",
+    "dependencies": {
+        "recast": "^0.10.32"
+    },
+    "devDependencies": {
+        "mocha": "^2.3.2"
+    }
 }
