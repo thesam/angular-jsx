@@ -17,4 +17,8 @@ describe("angularjsx", function () {
     it("should convert JSX with quotes", function () {
         assert.equal(angularjsx.convert("var x = {template: <div class=\"foo\"></div>}"), "var x = {template: \"<div class=\\\"foo\\\"></div>\"}");
     });
+    it("should ignore non-JSX templates", function () {
+        //TODO: \r\n on Windows only? Test on Linux.
+        assert.equal(angularjsx.convert("var x = {template: {\n}}"), "var x = {template: {\r\n}}");
+    });
 });

@@ -1,4 +1,4 @@
-exports.convert = function (code) {
+module.exports.convert = function (code) {
     var recast = require("recast");
 
     var ast = recast.parse(code);
@@ -9,11 +9,9 @@ exports.convert = function (code) {
                 var obj = path.value;
                 for (var i = 0; i < obj.properties.length; i++) {
                     var property = obj.properties[i];
-                    if (property.key.name === "template") {
+                    if (property.key.name === "template" && property.value.type === "JSXElement") {
                         var templateStr = recast.print(property.value).code;
-                        console.log(templateStr);
                         templateStr = templateStr.replace(/(\r\n|\n|\r)/g,'\n');
-                        console.log(templateStr);
                         property.value = b.literal(templateStr);
                     }
                 }

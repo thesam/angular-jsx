@@ -1,10 +1,10 @@
 {
     "name": "angular-jsx",
     "version": "0.0.0",
-    "description": "JSX support for Angular",
+    "description": "JSX support for Angular templates",
     "main": "index.js",
     "scripts": {
-        "test": "node ./node_modules/mocha/bin/mocha --reporter spec --full-trace"
+        "test": "mocha"
     },
     "author": "Samuel Moritz <samuel.moritz@gmail.com>",
     "license": "MIT",
