@@ -11,7 +11,9 @@ exports.convert = function (code) {
                     var property = obj.properties[i];
                     if (property.key.name === "template") {
                         var templateStr = recast.print(property.value).code;
+                        console.log(templateStr);
                         templateStr = templateStr.replace(/(\r\n|\n|\r)/g,'\n');
+                        console.log(templateStr);
                         property.value = b.literal(templateStr);
                     }
                 }
