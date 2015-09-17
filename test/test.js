@@ -11,4 +11,7 @@ describe("angularjsx", function () {
     it("should convert simple JSX template", function () {
         assert.equal(angularjsx.convert("var x = {template: <div></div>}"), 'var x = {template: "<div></div>"}');
     });
+    it("should convert multi-line JSX template", function () {
+        assert.equal(angularjsx.convert("var x = {template: <div>\n</div>}"), 'var x = {template: "<div>\\n</div>"}');
+    });
 });
