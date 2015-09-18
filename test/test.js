@@ -21,4 +21,7 @@ describe("angularjsx", function () {
         //TODO: \r\n on Windows only? Test on Linux.
         assert.equal(angularjsx.convert("var x = {template: {\n}}"), "var x = {template: {\r\n}}");
     });
+    it("should handle dots in span", function () {
+        assert.equal(angularjsx.convert("var x = {template: <span>{{a.b}}</span>}"), "var x = {template: \"<span>{{a.b}}</span>\"}");
+    });
 });
