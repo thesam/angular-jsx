@@ -1,7 +1,8 @@
 module.exports.convert = function (code) {
     var recast = require("recast");
+    var esprima = require("./esprima-fb-patched/esprima.js");
 
-    var ast = recast.parse(code);
+    var ast = recast.parse(code, {esprima: esprima});
     var b = recast.types.builders;
 
     recast.visit(ast, {
