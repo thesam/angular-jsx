@@ -1,21 +1,21 @@
 {
-    "name": "angular-jsx",
-    "version": "0.0.1",
-    "description": "JSX support for Angular templates",
-    "main": "index.js",
-    "scripts": {
-        "test": "mocha"
-    },
-    "author": "Samuel Moritz <samuel.moritz@gmail.com>",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/thesam/angular-jsx.git"
-    },
-    "license": "MIT",
-    "dependencies": {
-        "recast": "^0.10.32"
-    },
-    "devDependencies": {
-        "mocha": "^2.3.2"
-    }
+  "name": "angular-jsx",
+  "version": "0.0.2",
+  "description": "JSX support for Angular templates",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Samuel Moritz <samuel.moritz@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thesam/angular-jsx.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "recast": "^0.10.32"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.2"
+  }
 }
