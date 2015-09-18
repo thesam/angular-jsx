@@ -30,8 +30,12 @@ describe("angularjsx", function () {
     it("should handle parentheses", function () {
         assert.equal(angularjsx.convert("var x = {template: (<br/>)}"), "var x = {template: (\"<br/>\")}");
     });
-    it("should parse Angular directive", function () {
+    it("should parse simple template in Angular directive", function () {
         assertFixture(0);
+    });
+
+    it("should parse multi-line template in Angular directive", function () {
+        assertFixture(1);
     });
 
     function assertFixture(index) {
