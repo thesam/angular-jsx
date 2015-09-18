@@ -30,4 +30,21 @@ describe("angularjsx", function () {
     it("should handle parentheses", function () {
         assert.equal(angularjsx.convert("var x = {template: (<br/>)}"), "var x = {template: (\"<br/>\")}");
     });
+    it("should parse Angular directive", function () {
+        assertFixture(0);
+    });
+
+    function assertFixture(index) {
+        var fs = require("fs");
+
+        function input(index) {
+            return fs.readFileSync("test/fixtures/" + index + "in.js", "utf8");
+        }
+
+        function expectedOutput(index) {
+            return fs.readFileSync("test/fixtures/" + index + "out.js", "utf8");
+        }
+
+        assert.equal(angularjsx.convert(input(index)), expectedOutput(index));
+    }
 });
