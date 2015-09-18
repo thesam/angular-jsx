@@ -17,11 +17,17 @@ describe("angularjsx", function () {
     it("should convert JSX with quotes", function () {
         assert.equal(angularjsx.convert("var x = {template: <div class=\"foo\"></div>}"), "var x = {template: \"<div class=\\\"foo\\\"></div>\"}");
     });
-    it("should ignore non-JSX templates", function () {
+    it("should ignore non-JSX properties named 'template'", function () {
         //TODO: \r\n on Windows only? Test on Linux.
         assert.equal(angularjsx.convert("var x = {template: {\n}}"), "var x = {template: {\r\n}}");
     });
-    it("should handle dots in span", function () {
+    it("should ignore string template", function () {
+        assert.equal(angularjsx.convert("var x = {template: \"<br/>\"}"), "var x = {template: \"<br/>\"}");
+    });
+    it("should handle dots and curly braces in span", function () {
         assert.equal(angularjsx.convert("var x = {template: <span>{{a.b}}</span>}"), "var x = {template: \"<span>{{a.b}}</span>\"}");
+    });
+    it("should handle parentheses", function () {
+        assert.equal(angularjsx.convert("var x = {template: (<br/>)}"), "var x = {template: (\"<br/>\")}");
     });
 });
