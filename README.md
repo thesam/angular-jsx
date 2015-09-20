@@ -3,7 +3,10 @@ Do you use Angular? Are you tired of putting your templates in separate files or
 
 With the angular-jsx library you can use JSX directly in your directives. JSX templates are converted to strings that Angular can understand.
 
-## Example 1
+## Used by
+* [gulp-angular-jsx](https://www.github.com/thesam/gulp-angular-jsx)
+
+## Examples
 ### Input
 ```
 angular.module("foo").directive("bar",
@@ -24,7 +27,6 @@ angular.module("foo").directive("bar",
     }
 );
 ```
-## Example 2
 ### Input
 ```
 angular.module("foo").directive("bar",
