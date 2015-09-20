@@ -1,7 +1,7 @@
 # angular-jsx
 Do you use Angular? Are you tired of putting your templates in separate files or trying to escape them in strings?
 
-With the angular-jsx library you can use JSX directly in your directives. JSX templates are converted to strings that Angular can understand.
+With the angular-jsx library you can use JSX-style templates directly in your directives. The templates are converted to strings that Angular can understand.
 
 ## Used by
 * [gulp-angular-jsx](https://www.github.com/thesam/gulp-angular-jsx)
