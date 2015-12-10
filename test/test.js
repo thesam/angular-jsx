@@ -30,6 +30,13 @@ describe("angularjsx", function () {
     it("should handle parentheses", function () {
         assert.equal(angularjsx.convert("var x = {template: (<br/>)}"), "var x = {template: (\"<br/>\")}");
     });
+    it("should replace the className attribute with class", function() {
+        assert.equal(angularjsx.convert("var x = {template: <div className=\"test\"></div>}"),'var x = {template: "<div class=\\"test\\"></div>"}');
+    });
+    it("should ignore className when it is not an attribute", function() {
+        assert.equal(angularjsx.convert("var x = {template: <div foo=\"className\"></div>}"),'var x = {template: "<div foo=\\"className\\"></div>"}');
+        assert.equal(angularjsx.convert("var x = {template: <div>className</div>}"),'var x = {template: "<div>className</div>"}');
+    });
     it("should parse simple template in Angular directive", function () {
         assertFixture(0);
     });
