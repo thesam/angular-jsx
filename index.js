@@ -13,6 +13,7 @@ module.exports.convert = function (code) {
                     if (property.key.name === "template" && property.value.type === "JSXElement") {
                         var templateStr = recast.print(property.value).code;
                         templateStr = templateStr.replace(/(\r\n|\n|\r)/g,'\n');
+                        templateStr = templateStr.replace(/<(.*)className="(.*)"(.*)>/gi, "<$1class=\"$2\"$3>");
                         property.value = b.literal(templateStr);
                     }
                 }
