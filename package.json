@@ -1,6 +1,6 @@
 {
   "name": "angular-jsx",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "JSX support for Angular templates",
   "main": "index.js",
   "scripts": {
