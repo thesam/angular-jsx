@@ -5,6 +5,7 @@ With the angular-jsx library you can use JSX-style templates directly in your di
 
 ## Used by
 * [gulp-angular-jsx](https://www.github.com/thesam/gulp-angular-jsx)
+* [grunt-angular-jsx](https://github.com/albertboada/grunt-angular-jsx)
 
 ## Examples
 ### Input
